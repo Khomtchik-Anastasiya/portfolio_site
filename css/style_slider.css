@@ -1,0 +1,91 @@
+.wrapper {
+    max-height: 500px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+    overflow: hidden;
+}
+
+
+/* Лента слайдов */
+
+.slider .slick-track {
+    display: flex;
+}
+
+.slider {
+    position: relative;
+    padding: 0px 60px;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: -25px 0 0 0;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url("http://fe.it-academy.by/Sites/0040188/images/slider/left.svg") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url("http://fe.it-academy.by/Sites/0040188/images/slider/right.svg") 0 0 / 100% no-repeat;
+}
+
+.slider_item {
+    padding: 0px 15px;
+    overflow: hidden;
+    max-height: 450px;
+}
+
+.slider_item img {
+    max-height:100%;
+}
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.slider .slick-dots li button {
+    font-size: 0px;
+    width: 7px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+}
+
+.slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: solid 1px grey;
+}
+
+@media only all and (max-width:768px) {
+    .wrapper {
+    padding: 10px;
+}
+.slider {
+    position: relative;
+    padding: 0px 10px;
+}
+}

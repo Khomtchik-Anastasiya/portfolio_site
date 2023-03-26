@@ -1,0 +1,22 @@
+.content_container {
+    max-width: 1140px;
+    background-color: whitesmoke;
+    margin: 80px auto 0 auto;
+    border: solid 1px whitesmoke;
+}
+
+.content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+}
+
+body .content li {
+    padding: 30px 30px 30px 30px;
+}
+
+@media only all and (max-width:768px) {
+    .content ul {
+        grid-template-columns: 100%;
+    }
+}

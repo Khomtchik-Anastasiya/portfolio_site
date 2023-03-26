@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1">
+    <title>Забронировать стол. ORGANIC FOOD - Ресторан в Минске</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Comforter+Brush&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<style>
+.form {
+    margin: 0 auto;
+    max-width: 550px;
+    color:black;
+   padding: 30px 0;
+}
+
+.form_title {
+text-align:center;
+}
+
+.form_item {
+margin: 0px 0px 10px 0px;
+}
+
+.form_input{
+margin: 0px 0px 10px 0px;
+}
+
+.form_input {
+    width: calc(100% - 24px);
+    height: 30px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size:12px;
+    color: black;
+}
+
+textarea.form_input {
+height:120px;
+padding:10px;
+}
+
+.form_input:invalid:required {
+  border: 1px solid red;
+}
+
+
+.form_button {
+  border-radius:0px !important;
+height:40px;
+padding:10px;
+background-color:grey;
+width:100%;
+box-shadow:2px 3px 2px dimgray;
+text-transform:uppercase;
+letter-spacing:2px;
+font-weight:bold;
+transition: all 0.5s ease 0s;
+position:relative;
+ top:0;
+}
+
+.form_button:hover {
+    cursor: pointer;
+ background-color:darkorange
+}
+
+.form_button:active {
+    top:3px;
+ box-shadow:0px 1px 0px black;
+}
+
+</style>
+
+<body>
+    <div class="content form">
+        <form method=post action='http://fe.it-academy.by/TestForm.php' id='form' class="form_body">
+            <h2 class="form_title">Забронировать стол</h2>
+            <div class="form_item required">
+                <label for='formName' class="form_label">Имя (обязательно)</label>
+                <input type='text' id="formName" name='name' placeholder='Ваше имя' class="form_input" required>
+            </div>
+            <div class="form_item">
+                <label for='formTel' class="form_label _tel">Телефон (обязательно)</label>
+                <input type='tel' id="formTel" name='tel' placeholder='Телефон' class="form_input" required>
+            </div>
+            <div class="form_item">
+                <label for='formDateTime' class="form_label">Дата и время (обязательно)</label>
+                <input type="datetime-local" id="formDateTime" name='datetime' placeholder='Дата и время' class="form_input" required>
+            </div>
+            <div class="form_item">
+                <label for='formNumberPeople' class="form_label">Количество человек</label>
+                <input type='number' id="formNumberPeople" name='number' min="1" max="30"  placeholder='Количество человек' class="form_input">
+            </div>
+            <div class="form_item">
+                <label for='formText' class="form_label">Сообщение:</label>
+                <textarea name="message" id="formText" class="form_input"></textarea>
+            </div>
+            <input type='button' class="form_button" value='Отправить' onclick='alert("Спасибо! Ваша заявка на бронь отправлена! В ближайшее время с Вами свяжется администратор для подтверждения брони и уточнения деталей!")' style="border-radius: 12px;"><br>
+            <p> ЛИБО звоните по телефону +375-44-111-11-11 и администратор забронирует для Вас стол!</p>
+        </form>
+    </div>
+</body>
+
+</html>

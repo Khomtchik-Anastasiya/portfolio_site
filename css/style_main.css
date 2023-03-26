@@ -1,0 +1,71 @@
+.main {
+    display: grid;
+    grid-template-areas: 
+    'header' 
+    'content' 
+    'footer';
+}
+
+
+.content {
+    grid-area: content;
+    height: 100vh;
+    color: white;
+    position: relative;
+    margin-top: 80px;
+}
+
+
+.content_back {
+    height: 100vh;
+    background-image: url("http://fe.it-academy.by/Sites/0040188/images/background_1.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-filter: brightness(40%);
+}
+
+.content_body {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+}
+
+.content .logo {
+    margin: 115px auto auto auto;
+    font-size: 60px;
+    text-align: center;
+}
+
+.content .logo img {
+    max-height:100%;
+    max-width:100%;
+    object-fit:cover;
+}
+
+.content .logo h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 99px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+@media only all and (min-height:1000px) {
+    .content,  .content_back, .content_body {
+        height:75vh;
+    }
+    .logo {
+        padding:0px 50px 0px 50px;
+    }
+}
+
+@media only all and (max-width:400px) {
+    .main  h1 {
+        font-size:32px !important;
+    }
+}

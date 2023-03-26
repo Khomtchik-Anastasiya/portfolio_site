@@ -1,0 +1,46 @@
+.content_container {
+    max-width: 1140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 540px;
+    margin: 80px auto 0 auto;
+    padding-bottom: 10px;
+}
+
+.content {
+    padding: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.content.form {
+    padding: 0 15px 0 15px;
+    width: auto;
+    border: 1px solid transparent;
+}
+
+.content.image {
+    background: no-repeat;
+    background-image: url('http://fe.it-academy.by/Sites/0040188/images/booking.jpg');
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.content input {
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+.content input[type='button']:hover {
+    cursor: pointer;
+}
+
+@media only all and (max-width: 850px) {
+    .content_container {
+        grid-template-columns: 100%;
+        grid-template-rows: 540px 540px;
+    }
+}

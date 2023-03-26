@@ -1,0 +1,39 @@
+.content_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 405px 405px;
+    margin: 80px auto 0 auto;
+    max-width: 1140px;
+}
+
+.main .content button {
+    font-size: 14px;
+    letter-spacing: 2px;
+    border: 0;
+    border-bottom: 2px solid;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+.main .content button:hover {
+    cursor: pointer;
+    color:darkorange;
+}
+
+.content {
+    padding: 30px 30px 30px 30px;
+}
+
+@media only all and (max-width: 950px) {
+    .content_container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 405px);
+    }
+}
+
+@media only all and (max-width:650px) {
+    .content_container {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 405px);
+    }
+}
